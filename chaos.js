@@ -70,7 +70,7 @@ var Chaos = exports.Chaos = function(dbName) {
   this.dbName = dbName
   this.ready = false
   
-  path.exists(this.dbName, function(exists) {
+  fs.exists(this.dbName, function(exists) {
     if (!exists) {
       self.__createDB(self.dbName)
     } else {
